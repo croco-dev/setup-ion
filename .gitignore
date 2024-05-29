@@ -1,0 +1,9 @@
+node_modules
+*.log
+tmp
+temp
+*.tmp
+*.temp
+tmp.*
+temp.*
+.pnpm-store

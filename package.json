@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "setup-ion",
+  "version": "1.0.0",
+  "description": "Setup ion on GitHub Actions.",
+  "keywords": [
+    "SST",
+    "ion",
+    "github",
+    "actions",
+    "setup"
+  ],
+  "main": "dist/index.js",
+  "repository": "git@github.com:croco-dev/setup-ion.git",
+  "bugs": "https://github.com/croco-dev/setup-ion/issues",
+  "license": "MIT",
+  "author": "kang-heewon",
+  "scripts": {
+    "build": "esbuild --target=node20 --outfile=dist/setup/index.js --bundle --minify --platform=node --format=cjs src/index.ts",
+    "start": "npm run build && node dist/setup/index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/tool-cache": "2.0.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/glob": "^0.4.0",
+    "@actions/io": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "esbuild": "^0.19.2",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "prettier": {
+    "quoteProps": "preserve"
+  },
+  "packageManager": "pnpm@9.1.3+sha512.7c2ea089e1a6af306409c4fc8c4f0897bdac32b772016196c469d9428f1fe2d5a21daf8ad6512762654ac645b5d9136bb210ec9a00afa8dbc4677843ba362ecd"
+}

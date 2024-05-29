@@ -1,0 +1,13 @@
+name: Setup SST ion
+description: Download, install SST ion to your path.
+author: kang-heewon
+branding:
+  icon: circle
+  color: white
+inputs:
+  version:
+    description: 'The version of ion to install. (e.g."latest", "v0.0.393")'
+    required: true
+runs:
+  using: "node20"
+  main: "dist/setup/index.js"
